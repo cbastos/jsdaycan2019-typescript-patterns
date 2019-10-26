@@ -7,8 +7,9 @@ import { AppComponent } from './app.component';
 import { FactoryMethodSelectComponent } from './creational/factory-method-with-params/real-world/select.component';
 import { FactoryMethodTextComponent } from './creational/factory-method-with-params/real-world/text.component';
 import { FactoryMethodTextAreaComponent } from './creational/factory-method-with-params/real-world/textarea.component';
-import { FactoryMethodWrapperComponent } from './creational/factory-method-with-params/real-world/wrapper.component';
+import { FactoryMethodCreatorComponent } from './creational/factory-method-with-params/real-world/creator.component';
 import { FactoryMethodRealWorldComponent } from './creational/factory-method-with-params/real-world/real-world.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
 
 @NgModule({
   imports: [
@@ -20,10 +21,11 @@ import { FactoryMethodRealWorldComponent } from './creational/factory-method-wit
   ],
   declarations: [
     AppComponent,
+    TopBarComponent,
     FactoryMethodSelectComponent,
     FactoryMethodTextComponent,
     FactoryMethodTextAreaComponent,
-    FactoryMethodWrapperComponent,
+    FactoryMethodCreatorComponent,
     FactoryMethodRealWorldComponent
   ],
   entryComponents: [

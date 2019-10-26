@@ -2,8 +2,8 @@ import { Component, ComponentFactoryResolver, ViewContainerRef, OnInit, Input } 
 import { ComponentModes } from "./component-modes";
 import { ComponentFactory } from "./component-factory";
 
-@Component({ selector: 'fm-wrapper-component', template: '' })
-export class FactoryMethodWrapperComponent implements OnInit {
+@Component({ selector: 'fm-creator-component', template: '' })
+export class FactoryMethodCreatorComponent implements OnInit {
     @Input() mode: ComponentModes;
     @Input() data: Array<any>;
 
