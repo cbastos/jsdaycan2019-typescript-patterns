@@ -18,7 +18,8 @@
     "@angular/animations": "8.2.12",
     "@angular/platform-browser": "8.2.12",
     "angular-in-memory-web-api": "0.8.0",
-    "@angular/platform-browser-dynamic": "8.2.12"
+    "@angular/platform-browser-dynamic": "8.2.12",
+    "ng2-tooltip-directive": "2.8.17"
   },
   "scripts": {
     "ng": "ng",

@@ -10,6 +10,9 @@ import { FactoryMethodTextAreaComponent } from './creational/factory-method-with
 import { FactoryMethodCreatorComponent } from './creational/factory-method-with-params/real-world/creator.component';
 import { FactoryMethodRealWorldComponent } from './creational/factory-method-with-params/real-world/real-world.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { TooltipModule } from 'ng2-tooltip-directive';
+import { FacadeRealWorldComponent } from './structural/facade/real-world/real-world.component';
+import { TooltipFacadeComponent } from './structural/facade/real-world/tooltip-facade.component';
 
 @NgModule({
   imports: [
@@ -17,7 +20,9 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: FactoryMethodRealWorldComponent },
-    ])
+      { path: 'facade', component: FacadeRealWorldComponent }
+    ]),
+    TooltipModule
   ],
   declarations: [
     AppComponent,
@@ -26,7 +31,9 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     FactoryMethodTextComponent,
     FactoryMethodTextAreaComponent,
     FactoryMethodCreatorComponent,
-    FactoryMethodRealWorldComponent
+    FactoryMethodRealWorldComponent,
+    FacadeRealWorldComponent,
+    TooltipFacadeComponent
   ],
   entryComponents: [
     FactoryMethodSelectComponent,
