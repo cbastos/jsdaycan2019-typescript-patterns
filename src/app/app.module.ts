@@ -13,6 +13,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { TooltipModule } from 'ng2-tooltip-directive';
 import { FacadeRealWorldComponent } from './structural/facade/real-world/real-world.component';
 import { TooltipFacadeComponent } from './structural/facade/real-world/tooltip-facade.component';
+import { StrategyRealWorldComponent } from './behavioral/strategy/real-world/real-world.component';
+import { FieldFormatterService } from './behavioral/strategy/real-world/fieldFormatter.service';
 
 @NgModule({
   imports: [
@@ -20,7 +22,8 @@ import { TooltipFacadeComponent } from './structural/facade/real-world/tooltip-f
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: FactoryMethodRealWorldComponent },
-      { path: 'facade', component: FacadeRealWorldComponent }
+      { path: 'facade', component: FacadeRealWorldComponent },
+      { path: 'strategy', component: StrategyRealWorldComponent }
     ]),
     TooltipModule
   ],
@@ -33,13 +36,15 @@ import { TooltipFacadeComponent } from './structural/facade/real-world/tooltip-f
     FactoryMethodCreatorComponent,
     FactoryMethodRealWorldComponent,
     FacadeRealWorldComponent,
-    TooltipFacadeComponent
+    TooltipFacadeComponent,
+    StrategyRealWorldComponent
   ],
   entryComponents: [
     FactoryMethodSelectComponent,
     FactoryMethodTextComponent,
     FactoryMethodTextAreaComponent
   ],
+  providers: [FieldFormatterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
