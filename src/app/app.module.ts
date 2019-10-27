@@ -15,6 +15,7 @@ import { FacadeRealWorldComponent } from './structural/facade/real-world/real-wo
 import { TooltipFacadeComponent } from './structural/facade/real-world/tooltip-facade.component';
 import { StrategyRealWorldComponent } from './behavioral/strategy/real-world/real-world.component';
 import { FieldFormatterService } from './behavioral/strategy/real-world/fieldFormatter.service';
+import { PageObjectRealWorldComponent } from './ui/page-object/real-world/real-world.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { FieldFormatterService } from './behavioral/strategy/real-world/fieldFor
     RouterModule.forRoot([
       { path: '', component: FactoryMethodRealWorldComponent },
       { path: 'facade', component: FacadeRealWorldComponent },
-      { path: 'strategy', component: StrategyRealWorldComponent }
+      { path: 'strategy', component: StrategyRealWorldComponent },
+      { path: 'page-object', component: PageObjectRealWorldComponent }
     ]),
     TooltipModule
   ],
@@ -37,7 +39,8 @@ import { FieldFormatterService } from './behavioral/strategy/real-world/fieldFor
     FactoryMethodRealWorldComponent,
     FacadeRealWorldComponent,
     TooltipFacadeComponent,
-    StrategyRealWorldComponent
+    StrategyRealWorldComponent,
+    PageObjectRealWorldComponent
   ],
   entryComponents: [
     FactoryMethodSelectComponent,
