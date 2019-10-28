@@ -1,0 +1,11 @@
+<div *ngIf="visible">
+    <div class="back"></div>
+    <div class="modal">
+        <div class="content">
+            {{text}}
+        </div>
+        <footer>
+            <button (click)="close()">Close</button>
+        </footer>
+    </div>
+</div>

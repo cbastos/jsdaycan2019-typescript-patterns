@@ -16,6 +16,10 @@ import { TooltipFacadeComponent } from './structural/facade/real-world/tooltip-f
 import { StrategyRealWorldComponent } from './behavioral/strategy/real-world/real-world.component';
 import { FieldFormatterService } from './behavioral/strategy/real-world/fieldFormatter.service';
 import { PageObjectRealWorldComponent } from './ui/page-object/real-world/real-world.component';
+import { FlyweightRealWorldComponent } from './structural/flyweight/real-world/real-world.component';
+import { OriginalInfoComponent } from './structural/flyweight/real-world/original-info.component';
+import { RefactoredInfoComponent } from './structural/flyweight/real-world/refactored-info.component';
+import { FlyweightDialogComponent } from './structural/flyweight/real-world/dialog.component';
 
 @NgModule({
   imports: [
@@ -25,7 +29,8 @@ import { PageObjectRealWorldComponent } from './ui/page-object/real-world/real-w
       { path: '', component: FactoryMethodRealWorldComponent },
       { path: 'facade', component: FacadeRealWorldComponent },
       { path: 'strategy', component: StrategyRealWorldComponent },
-      { path: 'page-object', component: PageObjectRealWorldComponent }
+      { path: 'page-object', component: PageObjectRealWorldComponent },
+      { path: 'flyweight', component: FlyweightRealWorldComponent }
     ]),
     TooltipModule
   ],
@@ -40,7 +45,11 @@ import { PageObjectRealWorldComponent } from './ui/page-object/real-world/real-w
     FacadeRealWorldComponent,
     TooltipFacadeComponent,
     StrategyRealWorldComponent,
-    PageObjectRealWorldComponent
+    PageObjectRealWorldComponent,
+    FlyweightRealWorldComponent,
+    OriginalInfoComponent,
+    RefactoredInfoComponent,
+    FlyweightDialogComponent
   ],
   entryComponents: [
     FactoryMethodSelectComponent,

@@ -1,0 +1,8 @@
+<h3>Original implementation:</h3>
+<fly-original-info infoText="first info"></fly-original-info>
+<fly-original-info infoText="second info"></fly-original-info>
+
+<h3>Flyweight implementation:</h3>
+<fly-refactored-info infoText="first info" (showDialog)=showFlyweightDialog($event)></fly-refactored-info>
+<fly-refactored-info infoText="second info" (showDialog)=showFlyweightDialog($event)></fly-refactored-info>
+<fly-dialog #dialog></fly-dialog>
