@@ -1,7 +1,7 @@
 import { Validatable } from "./Validatable";
 
 export class Product implements Validatable {
-    constructor(private name: string) { }
+    constructor(public name: string) { }
 
     validate(): Array<string> {
         const errors = [''];

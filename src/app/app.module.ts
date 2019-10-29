@@ -20,6 +20,7 @@ import { FlyweightRealWorldComponent } from './structural/flyweight/real-world/r
 import { OriginalInfoComponent } from './structural/flyweight/real-world/original-info.component';
 import { RefactoredInfoComponent } from './structural/flyweight/real-world/refactored-info.component';
 import { FlyweightDialogComponent } from './structural/flyweight/real-world/dialog.component';
+import { MvvmRealWorldComponent } from './ui/mvvm/real-world/real-world.component';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { FlyweightDialogComponent } from './structural/flyweight/real-world/dial
       { path: 'facade', component: FacadeRealWorldComponent },
       { path: 'strategy', component: StrategyRealWorldComponent },
       { path: 'page-object', component: PageObjectRealWorldComponent },
-      { path: 'flyweight', component: FlyweightRealWorldComponent }
+      { path: 'flyweight', component: FlyweightRealWorldComponent },
+      { path: 'mvvm', component: MvvmRealWorldComponent }
     ]),
     TooltipModule
   ],
@@ -49,7 +51,8 @@ import { FlyweightDialogComponent } from './structural/flyweight/real-world/dial
     FlyweightRealWorldComponent,
     OriginalInfoComponent,
     RefactoredInfoComponent,
-    FlyweightDialogComponent
+    FlyweightDialogComponent,
+    MvvmRealWorldComponent
   ],
   entryComponents: [
     FactoryMethodSelectComponent,
