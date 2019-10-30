@@ -4,6 +4,4 @@ import { Component, OnInit } from "@angular/core";
     selector: 'observer',
     templateUrl: './real-world.component.html'
 })
-export class ObserverRealWorldComponent {
-
-}
+export class ObserverRealWorldComponent { }
