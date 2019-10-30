@@ -23,6 +23,9 @@ import { FlyweightDialogComponent } from './structural/flyweight/real-world/dial
 import { MvvmRealWorldComponent } from './ui/mvvm/real-world/real-world.component';
 import { ConnectorService } from './state/connector.service';
 import store from './state/initialState';
+import { ObserverRealWorldComponent } from './behavioral/observer/real-world/real-world.component';
+import { Observer1Component } from './behavioral/observer/real-world/observer1.component';
+import { Observer2Component } from './behavioral/observer/real-world/observer2.component';
 
 @NgModule({
   imports: [
@@ -34,7 +37,8 @@ import store from './state/initialState';
       { path: 'strategy', component: StrategyRealWorldComponent },
       { path: 'page-object', component: PageObjectRealWorldComponent },
       { path: 'flyweight', component: FlyweightRealWorldComponent },
-      { path: 'mvvm', component: MvvmRealWorldComponent }
+      { path: 'mvvm', component: MvvmRealWorldComponent },
+      { path: 'observer', component: ObserverRealWorldComponent }
     ]),
     TooltipModule
   ],
@@ -54,7 +58,10 @@ import store from './state/initialState';
     OriginalInfoComponent,
     RefactoredInfoComponent,
     FlyweightDialogComponent,
-    MvvmRealWorldComponent
+    MvvmRealWorldComponent,
+    ObserverRealWorldComponent,
+    Observer1Component,
+    Observer2Component
   ],
   entryComponents: [
     FactoryMethodSelectComponent,
