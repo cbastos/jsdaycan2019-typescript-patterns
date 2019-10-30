@@ -3,7 +3,9 @@ import { Customer } from "./Customer";
 import { Product } from "./Product";
 
 export class Order implements Validatable {
-    constructor(public productList: Array<Product>, private customer: Customer) { }
+    constructor(public id: string,
+        public productList: Array<Product>,
+        private customer: Customer) { }
 
     validate(): Array<string> {
         let errors = [''];

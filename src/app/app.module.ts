@@ -21,6 +21,8 @@ import { OriginalInfoComponent } from './structural/flyweight/real-world/origina
 import { RefactoredInfoComponent } from './structural/flyweight/real-world/refactored-info.component';
 import { FlyweightDialogComponent } from './structural/flyweight/real-world/dialog.component';
 import { MvvmRealWorldComponent } from './ui/mvvm/real-world/real-world.component';
+import { ConnectorService } from './state/connector.service';
+import store from './state/initialState';
 
 @NgModule({
   imports: [
@@ -59,7 +61,13 @@ import { MvvmRealWorldComponent } from './ui/mvvm/real-world/real-world.componen
     FactoryMethodTextComponent,
     FactoryMethodTextAreaComponent
   ],
-  providers: [FieldFormatterService],
+  providers: [
+    FieldFormatterService,
+    {
+      provide: ConnectorService,
+      useFactory: () => new ConnectorService(store)
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

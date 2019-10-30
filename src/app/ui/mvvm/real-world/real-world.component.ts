@@ -1,36 +1,33 @@
-import { Component, OnInit } from "@angular/core";
-import { Order } from "src/app/structural/composite/real-world/Order";
-import { OrderAgent } from "./orderAgent";
+import { Component, OnInit, Input } from "@angular/core";
+import { Order } from "../../../state/entities/Order";
+import { ConnectorService } from "../../../state/connector.service";
+import { addNewProduct as addNewProductStateAction } from "../../../state/actions";
 
 @Component({
     selector: 'mvvm',
     templateUrl: './real-world.component.html'
 })
-export class MvvmRealWorldComponent implements OnInit {
-    private model: Order;
-    private orderAgent: OrderAgent;
+export class MvvmRealWorldComponent {
     public productNames: Array<string> = [];
+    private model: Order;
 
-    constructor() {
-        this.orderAgent = new OrderAgent();
-    }
-
-    async ngOnInit() {
-        this.model = await this.getModel();
+    @Input() set order(orderFromState: Order) {
+        this.model = orderFromState;
         this.buildFormattedOrderList();
     }
+    get order() { return this.model; }
 
-    private async getModel(): Promise<Order> {
-        const model = await this.orderAgent.getOrder();
-        return model;
+    constructor(private connector: ConnectorService) {
+        this.connector.registerObserver(this);
     }
 
     private buildFormattedOrderList(): void {
         this.productNames = this.model.productList.map(p => p.name);
     }
 
-    addNewProductName() {
-        this.productNames.push('new product');
-        // Possible call to the Agent to store the new product name.
+    addNewProduct() {
+        this.connector.updateState(
+            addNewProductStateAction(this.model)
+        );
     }
 }
