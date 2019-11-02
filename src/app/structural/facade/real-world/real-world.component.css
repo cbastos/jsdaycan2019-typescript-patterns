@@ -1,0 +1,9 @@
+.container {
+  /* max-width: 30%; */
+  margin-top: 30%;
+}
+
+.container span {
+  margin-right: 5%;
+  margin-left: 5%;
+}

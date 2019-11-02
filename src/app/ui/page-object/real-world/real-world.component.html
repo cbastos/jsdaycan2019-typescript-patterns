@@ -1,4 +1,10 @@
-<label for="name"></label>
-<input type="text" name="name" [value]="name" (input)="name = $event.target.value" />
-<button (click)="sayHello()">Say Hello!</button>
-<span id="greeting">{{greeting}}</span>
+<div class="container">
+    <label for="name"></label>
+    <input type="text" name="name" [value]="name" (input)="name = $event.target.value" />
+</div>
+<div>
+    <button (click)="sayHello()">Say Hello!</button>
+</div>
+<div>
+    <span id="greeting" class="greeting">{{greeting}}</span>
+</div>
