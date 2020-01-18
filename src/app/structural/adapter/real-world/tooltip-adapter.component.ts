@@ -2,9 +2,9 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
     selector: 'fa-tooltip',
-    templateUrl: './tooltip-facade.component.html'
+    templateUrl: './tooltip-adapter.component.html'
 })
-export class TooltipFacadeComponent {
+export class TooltipAdapterComponent {
     @Input() text: string;
     @Output() shown: EventEmitter<void> = new EventEmitter<void>();
 

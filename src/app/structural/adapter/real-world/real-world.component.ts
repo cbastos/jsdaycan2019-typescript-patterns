@@ -1,11 +1,11 @@
 import { Component } from "@angular/core";
 
 @Component({
-    selector: 'facade',
+    selector: 'adapter',
     templateUrl: './real-world.component.html',
     styleUrls: ['./real-world.component.css']
 })
-export class FacadeRealWorldComponent {
+export class AdapterRealWorldComponent {
     tooltipWasShown() {
         console.log('tooltip was shown');
     }

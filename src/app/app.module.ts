@@ -11,8 +11,8 @@ import { FactoryMethodCreatorComponent } from './creational/factory-method-with-
 import { FactoryMethodRealWorldComponent } from './creational/factory-method-with-params/real-world/real-world.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { TooltipModule } from 'ng2-tooltip-directive';
-import { FacadeRealWorldComponent } from './structural/facade/real-world/real-world.component';
-import { TooltipFacadeComponent } from './structural/facade/real-world/tooltip-facade.component';
+import { AdapterRealWorldComponent } from './structural/adapter/real-world/real-world.component';
+import { TooltipAdapterComponent } from './structural/adapter/real-world/tooltip-adapter.component';
 import { StrategyRealWorldComponent } from './behavioral/strategy/real-world/real-world.component';
 import { FieldFormatterService } from './behavioral/strategy/real-world/fieldFormatter.service';
 import { PageObjectRealWorldComponent } from './ui/page-object/real-world/real-world.component';
@@ -33,7 +33,7 @@ import { Observer2Component } from './behavioral/observer/real-world/observer2.c
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: FactoryMethodRealWorldComponent },
-      { path: 'facade', component: FacadeRealWorldComponent },
+      { path: 'adapter', component: AdapterRealWorldComponent },
       { path: 'strategy', component: StrategyRealWorldComponent },
       { path: 'page-object', component: PageObjectRealWorldComponent },
       { path: 'flyweight', component: FlyweightRealWorldComponent },
@@ -50,8 +50,8 @@ import { Observer2Component } from './behavioral/observer/real-world/observer2.c
     FactoryMethodTextAreaComponent,
     FactoryMethodCreatorComponent,
     FactoryMethodRealWorldComponent,
-    FacadeRealWorldComponent,
-    TooltipFacadeComponent,
+    AdapterRealWorldComponent,
+    TooltipAdapterComponent,
     StrategyRealWorldComponent,
     PageObjectRealWorldComponent,
     FlyweightRealWorldComponent,
