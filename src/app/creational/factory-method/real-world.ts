@@ -14,6 +14,8 @@ abstract class AbstractLoggerCreator {
     public getLogger(): Logger {
         return this.createLogger();
     }
+
+    // More possible methods about loggers manipulation
 }
 
 class ConsoleLoggerCreator
@@ -32,12 +34,20 @@ class AppInsightsLoggerCreator
     }
 }
 
-export class Client {
-    initializeLoggers() {
-        const consoleLoggerCreator: AbstractLoggerCreator = new ConsoleLoggerCreator();
-        consoleLoggerCreator.getLogger().log('a message shown in the browser console');
+class LoggerCreator {
+    public static getLogger(environment): Logger {
+        const dictionary = {
+            ['DEV']: () => new ConsoleLoggerCreator(),
+            ['PROD']: () => new AppInsightsLoggerCreator()
+        };
+        return dictionary[environment]().getLogger();
+    }
+}
 
-        const appInsightsLoggerCreator: AbstractLoggerCreator = new AppInsightsLoggerCreator();
-        appInsightsLoggerCreator.getLogger().log('a message tracked in the cloud (Azure AppInsights)');
+export class Client {
+    constructor(private appConfig: { environment: string }) { }
+
+    main() {
+        LoggerCreator.getLogger(this.appConfig.environment).log('a message to log');
     }
 }

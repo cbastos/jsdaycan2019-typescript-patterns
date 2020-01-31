@@ -1,8 +1,8 @@
-interface Creator {
-  factoryMethod(): Product;
+abstract class Creator {
+  public abstract factoryMethod(): Product;
 }
 
-class ConcreteCreator implements Creator {
+class ConcreteCreator extends Creator {
   factoryMethod(): Product {
     return new ConcreteProduct1();
   }
@@ -18,7 +18,7 @@ class ConcreteProduct1 implements Product {
 
 export class Client {
   createProduct(): Product {
-    const creator = new ConcreteCreator();
+    const creator: Creator = new ConcreteCreator();
     return creator.factoryMethod();
   }
 }
